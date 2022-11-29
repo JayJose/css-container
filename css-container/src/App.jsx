@@ -1,14 +1,27 @@
 import "./App.css";
 
+function Card() {
+  return (
+    <div className="card">
+      <h1>Image</h1>
+      <h1>Info</h1>
+    </div>
+  );
+}
+
 function App() {
   return (
     <div className="page">
       <div className="layout">
-        <main>
-          <h1>Main</h1>
+        <main className="container">
+          <Card />
+          <Card />
+          <Card />
         </main>
-        <article>
-          <h1>Article</h1>
+        <article className="container">
+          <Card />
+          <Card />
+          <Card />
         </article>
       </div>
     </div>
