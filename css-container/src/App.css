@@ -1,0 +1,25 @@
+.page {
+  max-width: 1000px;
+  min-height: 100px;
+  margin: 0 auto;
+  border: 8px dashed green; 
+  container-type: inline-size;
+}
+
+.layout {
+  min-height: 100px;
+  border: 8px dashed goldenrod; 
+}
+
+@container (min-width: 900px) {
+  .layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 1rem
+  }
+}
+
+main, article {
+  min-height: 100px;
+  border: 8px dashed blue;
+}
