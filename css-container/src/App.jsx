@@ -1,10 +1,16 @@
 import "./App.css";
 
-function Card() {
+import movies from "./movies.json";
+
+function Card({ image, title, subtitle, description }) {
   return (
     <div className="card">
-      <h1>Image</h1>
-      <h1>Info</h1>
+      <div className="image" style={{ backgroundImage: `url(${image})` }} />
+      <div className="info">
+        <h2>{title}</h2>
+        <h4>{subtitle}</h4>
+        <p>{description}</p>
+      </div>
     </div>
   );
 }
@@ -14,14 +20,14 @@ function App() {
     <div className="page">
       <div className="layout">
         <main className="container">
-          <Card />
-          <Card />
-          <Card />
+          <Card {...movies[0]} />
+          <Card {...movies[1]} />
+          <Card {...movies[2]} />
         </main>
         <article className="container">
-          <Card />
-          <Card />
-          <Card />
+          <Card {...movies[3]} />
+          <Card {...movies[2]} />
+          <Card {...movies[1]} />
         </article>
       </div>
     </div>
